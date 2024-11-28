@@ -1,0 +1,61 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/light_blue"
+    android:gravity="center">
+
+    <!-- Tiêu đề ứng dụng -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dự Báo Thời Tiết"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:paddingBottom="16dp" />
+
+    <!-- Nhập tên thành phố -->
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên thành phố"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <!-- Nút tìm kiếm -->
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/primary_blue"
+        android:text="Tìm Kiếm"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <!-- Hiển thị kết quả thời tiết -->
+    <TextView
+        android:id="@+id/tvWeatherResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kết quả sẽ hiển thị ở đây"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+    <!-- Biểu tượng thời tiết -->
+    <ImageView
+        android:id="@+id/ivWeatherIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Biểu tượng thời tiết" />
+
+</LinearLayout>
