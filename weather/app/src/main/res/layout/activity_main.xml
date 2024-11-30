@@ -1,61 +1,126 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img2"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@color/light_blue"
-    android:gravity="center">
+    android:padding="16dp">
 
-    <!-- Tiêu đề ứng dụng -->
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="372dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="455dp"
+        android:paddingBottom="16dp"
         android:text="Dự Báo Thời Tiết"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#D7A86F"
+        android:textSize="40sp"
         android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:paddingBottom="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
 
-    <!-- Nhập tên thành phố -->
-    <EditText
-        android:id="@+id/etCity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nhập tên thành phố"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+    <ImageView
+        android:id="@+id/khung"
+        android:layout_width="342dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/khung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
 
-    <!-- Nút tìm kiếm -->
-    <Button
-        android:id="@+id/btnSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/primary_blue"
-        android:text="Tìm Kiếm"
-        android:textColor="@android:color/white"
-        android:textSize="16sp" />
-
-    <!-- Hiển thị kết quả thời tiết -->
-    <TextView
-        android:id="@+id/tvWeatherResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Kết quả sẽ hiển thị ở đây"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:gravity="center" />
-
-    <!-- Biểu tượng thời tiết -->
     <ImageView
         android:id="@+id/ivWeatherIcon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="Biểu tượng thời tiết" />
+        android:layout_width="125dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="30dp"
+        android:contentDescription="Biểu tượng thời tiết"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/btt1"
+        android:layout_width="253dp"
+        android:layout_height="134dp"
+        android:background="@drawable/buttonpress1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
+
+    <ImageView
+        android:id="@+id/btt"
+        android:layout_width="364dp"
+        android:layout_height="315dp"
+        android:background="@drawable/buttonpress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/khung"
+        app:layout_constraintVertical_bias="0.787" />
+
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="364dp"
+        android:layout_height="66dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Nhập tên thành phố"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="223dp"
+        android:layout_height="81dp"
+        android:backgroundTint="@color/white"
+        android:text="Tìm Kiếm"
+        android:textColor="@color/primary_blue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.791" />
+
+    <TextView
+        android:id="@+id/tvWeatherResult"
+        android:layout_width="333dp"
+        android:layout_height="126dp"
+        android:gravity="center"
+        android:text="Kết quả sẽ hiển thị ở đây"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.673"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
